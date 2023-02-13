@@ -19,7 +19,7 @@ pipeline{
             }
             steps {
                 echo '------sonar analysis started------'
-                with SonarQubeEnv('valaxy_sonarqube_server') {
+                withSonarQubeEnv('valaxy_sonarqube_server') {
                     sh "${scannerHome}/bin/sonar-scanner"
                     echo '-----sonar analysis stopped---'
             
