@@ -10,7 +10,20 @@ pipeline{
                 echo "-----build started...."
                 sh 'mvn clean install -Dmaven.test.skip=true'
                 echo "-----build completed----"
-                
+
+            }
+        }
+        stage('sonar analysis') {
+            environment {
+                scannerHome = tool 'sonarqube_scanner'
+            }
+            steps {
+                echo '------sonar analysis started------'
+                withSonarQubeEnv('sonarqube_server') {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                    echo '-----sonar analysis stopped---'
+            
+                }
             }
         }
     }
