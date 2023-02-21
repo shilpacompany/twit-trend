@@ -1,5 +1,5 @@
-def registry = 'https://shilpa1234.jfrog.io'
-def imageName = 'shilpa1234.jfrog.io/dockerimage-docker-local/ttrend'
+def registry = 'https://paluri123.jfrog.io/'
+def imageName = 'shilpa1234.jfrog.io/twitterimage-docker-local/ttrend'
 def version   = '2.0.2'
 pipeline{
     agent {
@@ -64,7 +64,7 @@ pipeline{
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "ttrend2-libs-release-local/{1}",
+                              "target": "twittertrend-libs-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5"]
