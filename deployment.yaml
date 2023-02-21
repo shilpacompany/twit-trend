@@ -17,7 +17,7 @@ spec:
       - name: regcred
       containers:
       - name:  valaxy-rtp
-        image: valaxy02.jfrog.io/valaxy-docker-local/ttrend:2.0.2
+        image: paluri123.jfrog.io/twitterimage-docker-local/ttrend:2.0.2
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
