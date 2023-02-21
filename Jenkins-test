@@ -104,7 +104,7 @@ pipeline{
           steps {
             script {
                echo '<--------------- Deploy Started --------------->'
-               sh 'twit-trend/deploy.sh'
+               sh './deploy.sh'
                echo '<--------------- Deploy Ends --------------->'
             }
           }
